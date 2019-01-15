@@ -18,5 +18,5 @@ path = "tests/test.rs"
 
 [dependencies]
 r2d2 = "0.8"
-postgres = "0.15"
+postgres = { git = "https://github.com/estebank/rust-postgres", branch = "from_reader_patch" }
 postgres-shared = "0.4"
