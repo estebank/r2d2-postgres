@@ -62,7 +62,7 @@ impl PostgresConnectionManager {
         where T: IntoConnectParams
     {
         // FIXME we shouldn't be using this private constructor :(
-        let params = params.into_connect_params().map_err(postgres_shared::error::connect)?;
+        let params = params.into_connect_params().map_err(postgres::error::connect)?;
 
         Ok(PostgresConnectionManager {
             params: params,
